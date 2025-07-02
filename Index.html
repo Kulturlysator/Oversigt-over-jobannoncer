@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Organizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Job Organizer</h1>
+
+    <input type="file" id="fileInput" accept=".pdf,.doc,.docx" />
+    <input type="url" id="linkInput" placeholder="Indsæt link til jobopslag" />
+    <button onclick="handleInput()">Upload eller hent</button>
+
+    <div id="result">
+      <label>Ansøgningsfrist: <input id="deadline" /></label>
+      <label>Link til opslag: <input id="joblink" /></label>
+      <label>Status: 
+        <select id="status">
+          <option value="NA">NA</option>
+          <option value="Ringet">Ringet</option>
+          <option value="Skrevet">Skrevet</option>
+          <option value="Ansøgt">Ansøgt</option>
+        </select>
+      </label>
+      <label>Link til ansøgning (Google Docs): <input id="applicationLink" /></label>
+      <button onclick="saveData()">Gem</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
